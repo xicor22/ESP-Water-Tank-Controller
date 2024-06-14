@@ -4,7 +4,7 @@ An ESP8266-based water tank monitoring and control system using ESPHome and Home
 
 ## Features
 * Monitors water levels at 5 different points.
-* Controls water pump and RO filter based on water levels.
+* Controls water pump based on water levels.
 * Measures water temperature using DS18B20 sensor.
 ## Hardware Requirements
 * ESP8266 (D1 Mini)
