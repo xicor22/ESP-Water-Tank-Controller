@@ -1,0 +1,70 @@
+type: vertical-stack
+cards:
+  - type: custom:fluid-level-background-card
+    card:
+      show_name: false
+      show_icon: true
+      show_state: true
+      type: glance
+      state_color: true
+      entities:
+        - entity: sensor.water_tank_level
+          icon: mdi:water-circle
+      columns: 1
+      title: Water Tank Level
+    entity: sensor.water_tank_level
+    severity:
+      - color: '#FF0000'
+        value: 15
+      - color:
+          - 251
+          - 255
+          - 0
+        value: 30
+      - color:
+          - 255
+          - 149
+          - 0
+        value: 60
+      - color:
+          - 77
+          - 255
+          - 0
+        value: 80
+      - color: '#FF0000'
+        value: 0
+      - color:
+          - 77
+          - 255
+          - 0
+        value: 100
+    tap_action:
+      action: none
+  - type: horizontal-stack
+    cards:
+      - type: custom:mushroom-entity-card
+        entity: switch.water_tank_d1_mini_water_pump_relay
+        icon: mdi:water-pump
+        icon_color: deep-purple
+        fill_container: true
+        name: Motor
+        tap_action:
+          action: toggle
+        hold_action:
+          action: none
+        double_tap_action:
+          action: none
+        secondary_info: none
+        icon_type: icon
+      - type: custom:mushroom-entity-card
+        entity: switch.water_tank_d1_mini_ro_filter_relay
+        double_tap_action:
+          action: none
+        hold_action:
+          action: none
+        tap_action:
+          action: toggle
+        icon: mdi:cup-water
+        icon_color: green
+        secondary_info: none
+        name: RO Filter
