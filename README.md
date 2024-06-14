@@ -12,4 +12,4 @@ An ESP8266-based water tank monitoring and control system using ESPHome and Home
 * Relays
 
 ## Wiring Diagram
-![Wiring Diagram]([https://example.com](https://github.com/xicor22/ESP-Water-Tank-Controller/blob/main/schematic.png))
+![Wiring Diagram]([https://example.com](https://github.com/xicor22/ESP-Water-Tank-Controller/blob/main/schematic.png?raw=true)
