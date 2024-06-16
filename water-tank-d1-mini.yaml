@@ -7,6 +7,7 @@ esp8266:
 
 # Enable logging
 logger:
+  baud_rate: 0
 
 # Enable Home Assistant API
 api:
@@ -27,87 +28,80 @@ wifi:
 
 captive_portal:
 
-
+# Using the delayed on off filter to get rid of random state changes 
+# that could happen because of the water splashing around
 binary_sensor:
   - platform: gpio
-    pin: 
-      number: GPIO12
-      mode: INPUT_PULLUP
+    pin:
+      number: 3
       inverted: True
+      mode: 
+        input: True
+        pullup: True
     name: "Water Level 1"
     device_class: "moisture"
     filters: 
       - delayed_on_off: 3000ms
-    on_state:
-      then:
-        - switch.turn_on: motor_relay
 
     
   - platform: gpio
-    pin: 
-      number: GPIO13
-      mode: INPUT_PULLUP
+    pin:
+      number: 12
       inverted: True
+      mode: 
+        input: True
+        pullup: True
     name: "Water Level 2"
     device_class: "moisture"
     filters: 
       - delayed_on_off: 3000ms
     
   - platform: gpio
-    pin: 
-      number: GPIO14
-      mode: INPUT_PULLUP
+    pin:
+      number: 13
       inverted: True
+      mode: 
+        input: True
+        pullup: True
     name: "Water Level 3"
     device_class: "moisture"
     filters: 
       - delayed_on_off: 3000ms
 
   - platform: gpio
-    pin: 
-      number: GPIO3
-      mode: INPUT_PULLUP
+    pin:
+      number: 14
       inverted: True
+      mode: 
+        input: True
+        pullup: True
     name: "Water Level 4"
     device_class: "moisture"
     filters: 
       - delayed_on_off: 3000ms
-
+  
   - platform: gpio
     pin: 
       number: GPIO1
       mode: INPUT_PULLUP
       inverted: True
-    name: "Water Level 5"
-    device_class: "moisture"
-    filters: 
-      - delayed_on_off: 3000ms
-    on_state:
-      then:
-        - switch.turn_off: motor_relay
-  
-  - platform: gpio
-    pin: 
-      number: GPIO10
-      mode: INPUT_PULLUP
-      inverted: True
     name: "Motor switch"
     filters: 
-      - delayed_on_off: 1000ms
+      - delayed_on_off: 500ms
 
   - platform: gpio
     pin: 
-      number: GPIO9
+      number: GPIO2
       mode: INPUT_PULLUP
       inverted: True
     name: "RO switch"
     device_class: "moisture"
     filters: 
-      - delayed_on_off: 1000ms
+      - delayed_on_off: 500ms
 
 
 dallas:
-  - pin: GPIO2
+  - pin: GPIO16
 
 sensor:
   - platform: dallas
