@@ -11,5 +11,9 @@ An ESP8266-based water tank monitoring and control system using ESPHome and Home
 * DS18B20 Temperature Sensor
 * Relays
 
+## Schematic
+![Schematic](https://github.com/xicor22/ESP-Water-Tank-Controller/blob/main/schematic.png?raw=true)
+
 ## Wiring Diagram
-![Wiring Diagram](https://github.com/xicor22/ESP-Water-Tank-Controller/blob/main/schematic.png?raw=true)
+![Schematic](https://github.com/xicor22/ESP-Water-Tank-Controller/blob/main/Wiring_schematic.jpg?raw=true)
+ 
