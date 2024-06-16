@@ -18,3 +18,16 @@ An ESP8266-based water tank monitoring and control system using ESPHome and Home
 ![Schematic](https://github.com/xicor22/ESP-Water-Tank-Controller/blob/main/Wiring_schematic.jpg?raw=true)
 
 **Note:** I'm using transistor because of the water's high resistance, in my case, 2-3 Mega Ohm.
+
+## Physical Circuit
+![Circuit](https://github.com/xicor22/ESP-Water-Tank-Controller/blob/main/Circuit_physical.jpg?raw=true)
+
+### 8 pin connection
+* Black - Level 1
+* Brown - Level 2
+* Red -Level 3
+* Orange - Level 4
+* White - Temp Sensor
+* Green - 5v
+* Blue - 3.3v
+* Purple - Ground
